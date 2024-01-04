@@ -1,0 +1,98 @@
+*,/*todos los elementos*/
+  *::before, /*para asegurar que los elementos generados por CSS de forma dinámica también sigan estas reglas*/
+  *::after {
+    box-sizing: border-box; /* sin esta regla, el ancho y alto de un elemento se calcula sin tener en cuenta el relleno y el borde*/
+    margin: 0;  /* para garantizar que no haya márgenes o rellenos no deseados aplicados de forma predeterminada por el navegador*/
+    padding: 0;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    width: 100%;
+    height:37em;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(img_1000x600.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header p, h1{
+    color: white;
+}
+
+header h1{
+    text-transform: uppercase;
+    color: #00ff99;
+    font-weight: bolder;
+    border: 1px solid white;
+    letter-spacing: 20px;
+    padding: 20px;
+    font-size: 5em;
+    margin: 0.3em;
+}
+
+header p:first-child span:first-child{
+    color: #00ff99;
+}
+
+header p:last-child span{
+    font-weight: bolder;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+article{
+    flex: 1;
+    padding: 3em;
+    text-align:center;
+}
+
+article h2{
+    font-weight: bolder;
+    margin: 5px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-image: url(img_600x400.jpg);
+    background-position: top;
+    background-size: cover;
+    height:40%;
+    padding: 9em;
+    color: white;
+}
+
+footer h2 {
+    display: flex;
+    margin-bottom: 2%;
+    margin-left: 50%;
+    margin-top: -8%;
+  }
+
+footer p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin-left: 50%;
+}
+
+footer a{
+    background-color: #00ff99;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-top: 1em;
+    margin-right: 24em;
+}
